@@ -1,5 +1,6 @@
 // Variables
 const gallery = document.querySelector(".gallery");
+const filters = document.querySelector(".filters");
 
 // Fonction qui retourne l'api works
 async function getWork() {
@@ -23,3 +24,22 @@ async function showWorks() {
   });
 }
 showWorks();
+
+// Affichage des Boutons Catégories
+
+async function getCategories() {
+  const apiCategories = await fetch("http://localhost:5678/api/categories");
+  return await apiCategories.json();
+}
+getCategories();
+
+async function btnCategories() {
+  const categories = await getCategories();
+  categories.forEach((iCategories) => {
+    const btn = document.createElement("button");
+    btn.textContent = iCategories.name;
+    btn.id = iCategories.id;
+    filters.appendChild(btn);
+  });
+}
+btnCategories();
