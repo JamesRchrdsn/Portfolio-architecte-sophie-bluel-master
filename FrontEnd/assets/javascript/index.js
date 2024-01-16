@@ -1,0 +1,25 @@
+// Variables
+const gallery = document.querySelector(".gallery");
+
+// Fonction qui retourne l'api works
+async function getWork() {
+  const apiWorks = await fetch("http://localhost:5678/api/works");
+  return await apiWorks.json();
+}
+getWork();
+
+// Afichage de works dans le DOM
+async function showWorks() {
+  const showImg = await getWork();
+  showImg.forEach((element) => {
+    const figure = document.createElement("figure");
+    const img = document.createElement("img");
+    const figcaption = document.createElement("figcaption");
+    img.src = element.imageUrl;
+    figcaption.textContent = element.title;
+    figure.appendChild(img);
+    figure.appendChild(figcaption);
+    gallery.appendChild(figure);
+  });
+}
+showWorks();
