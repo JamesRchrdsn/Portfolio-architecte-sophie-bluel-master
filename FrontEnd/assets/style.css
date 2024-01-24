@@ -175,7 +175,12 @@ nav li {
   font-size: 1.2em;
 }
 
-li:hover {
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.link:hover {
   color: #b1663c;
 }
 #introduction {
@@ -344,6 +349,7 @@ footer nav ul li {
   box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
   margin-top: 7px;
   border: none;
+  font-size: 20px;
 }
 
 .logForm .password {
@@ -360,6 +366,7 @@ footer nav ul li {
   font-size: 14px;
   border: none;
   margin: 37px auto 28px auto;
+  cursor: pointer;
 }
 
 .logPage a {
