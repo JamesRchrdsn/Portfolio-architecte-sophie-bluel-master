@@ -286,6 +286,7 @@ input[type="submit"] {
   width: 180px;
   text-align: center;
   border-radius: 60px;
+  cursor: pointer;
 }
 
 footer {
@@ -375,6 +376,14 @@ footer nav ul li {
   margin: 0 auto 350px auto;
 }
 
-.logIcn {
+#loginpage,
+#mainpage {
   font-weight: 600;
+}
+
+.logForm p {
+  color: red;
+  text-align: center;
+  padding-top: 22px;
+  font-size: 16px;
 }

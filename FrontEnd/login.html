@@ -12,41 +12,42 @@
     />
     <meta name="description" content="" />
     <link rel="stylesheet" href="./assets/style.css" />
-    <script src="./assets/javascript/login.js" defer></script>
   </head>
+  <body>
+    <header>
+      <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="link">projets</a></li>
+          <li><a href="#" class="link">contact</a></li>
+          <li>
+            <a href="login.html" id="loginpage" class="link">login</a>
+          </li>
+          <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="logPage">
+        <h1>Log In</h1>
+        <form class="logForm">
+          <label class="mail" for="email">E-mail</label>
+          <input type="email" name="email" id="email" />
+          <label class="password" for="password">Mot de passe</label>
+          <input type="password" name="password" id="password" />
+          <p></p>
+          <button class="logBtn">Se connecter</button>
+          <a href="#" class="forgotPass">Mot de passe oublié</a>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li>Mentions Légales</li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="./assets/javascript/login.js" defer></script>
+  </body>
 </html>
-<body>
-  <header>
-    <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="link">projets</a></li>
-        <li><a href="#" class="link">contact</a></li>
-        <li>
-          <a href="login.html" class="link">login</a>
-        </li>
-        <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="logPage">
-      <h1>Log In</h1>
-      <form class="logForm">
-        <label class="mail" for="email">E-mail</label>
-        <input type="email" name="email" id="email" />
-        <label class="password" for="password">Mot de passe</label>
-        <input type="password" name="password" id="password" />
-      </form>
-      <button class="logBtn">Se connecter</button>
-      <a href="#" class="forgotPass">Mot de passe oublié</a>
-    </section>
-  </main>
-  <footer>
-    <nav>
-      <ul>
-        <li>Mentions Légales</li>
-      </ul>
-    </nav>
-  </footer>
-</body>
