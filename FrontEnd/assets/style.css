@@ -175,12 +175,14 @@ nav li {
   font-size: 1.2em;
 }
 
-.link {
+.link,
+.login {
   text-decoration: none;
   color: #000;
 }
 
-.link:hover {
+.link:hover,
+.login:hover {
   color: #b1663c;
 }
 #introduction {

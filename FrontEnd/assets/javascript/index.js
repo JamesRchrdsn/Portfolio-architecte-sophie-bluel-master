@@ -80,3 +80,26 @@ async function filtersCat() {
   });
 }
 filtersCat();
+
+// Page index une fois connecter
+const banner = document.querySelector(".bannerEditor");
+const logout = document.querySelector(".login");
+const btnModif = document.querySelector(".Modif");
+
+// Fonction qui concerne toutes les modifications
+
+function logedModification() {
+  logout.textContent = "logout";
+  // Event listener pour deconnecter la session
+  logout.addEventListener("click", () => {
+    sessionStorage.removeItem("userOnline");
+  });
+}
+
+// Appel de ma sessionStorage
+const userOnline = sessionStorage.getItem("userOnline");
+
+// Si je suis connecte appel de la fonction loged
+if (userOnline) {
+  logedModification();
+}
