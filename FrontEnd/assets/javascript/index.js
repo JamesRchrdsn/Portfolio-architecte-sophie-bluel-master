@@ -43,6 +43,7 @@ async function btnCategories() {
   allBtn.textContent = "Tous";
   allBtn.id = "0";
   filters.appendChild(allBtn);
+  allBtn.classList.add("btnActive");
   categories.forEach((categorie) => {
     const btn = document.createElement("button");
     btn.textContent = categorie.name;
@@ -61,6 +62,10 @@ async function filtersCat() {
     everyBtn.addEventListener("click", (e) => {
       idBtn = e.target.id;
       gallery.innerHTML = "";
+      filtersBtn.forEach((btn) => {
+        btn.classList.remove("btnActive");
+      });
+      everyBtn.classList.add("btnActive");
       if (idBtn !== "0") {
         const cleanCat = imgFilter.filter((element) => {
           return element.categoryId == idBtn;

@@ -230,7 +230,7 @@ nav li {
   background-color: #fff;
 }
 
-.filters button:focus {
+.filters .btnActive {
   background-color: #1d6154;
   color: #fff;
 }
