@@ -427,9 +427,12 @@ footer nav ul li {
   align-items: center;
 }
 .Modif {
-  cursor: pointer;
   display: flex;
   gap: 11px;
+}
+
+.modificate:hover {
+  color: #b1663c;
 }
 
 .modificate {
@@ -437,7 +440,8 @@ footer nav ul li {
   font-family: "Work Sans";
   font-size: 14px;
   font-weight: 400;
-  line-height: normal;
+  line-height: 22px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  cursor: pointer;
 }
