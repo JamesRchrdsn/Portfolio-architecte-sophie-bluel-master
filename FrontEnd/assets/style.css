@@ -390,7 +390,54 @@ footer nav ul li {
   font-size: 16px;
 }
 
-.bannerEditor,
+.bannerEditor {
+  top: 0;
+  left: 0;
+  height: 59px;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  background-color: #000;
+}
+
+.modeEditor {
+  color: white;
+}
+
+.svgMod {
+  display: inline-block;
+}
+
+.headerLoged {
+  margin-top: 97px;
+}
+
+.myProject {
+  display: flex;
+  justify-content: space-between;
+  gap: 31px;
+}
+
+.portfolioMod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .Modif {
   cursor: pointer;
+  display: flex;
+  gap: 11px;
+}
+
+.modificate {
+  color: #000;
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  align-items: center;
 }
