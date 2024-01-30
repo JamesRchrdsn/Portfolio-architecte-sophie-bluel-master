@@ -389,3 +389,8 @@ footer nav ul li {
   padding-top: 22px;
   font-size: 16px;
 }
+
+.bannerEditor,
+.Modif {
+  cursor: pointer;
+}
