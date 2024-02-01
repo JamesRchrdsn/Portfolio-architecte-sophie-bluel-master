@@ -445,3 +445,52 @@ footer nav ul li {
   align-items: flex-end;
   cursor: pointer;
 }
+
+.modalContainer {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  width: 630px;
+  background-color: white;
+  left: 34%;
+  top: 18%;
+  border-radius: 10px;
+}
+
+.fa-times {
+  font-size: 24px;
+  top: 26px;
+  right: 30px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.modalTitle {
+  text-align: center;
+  font-size: 26px;
+  padding-top: 60px;
+}
+
+.actualGallery {
+  margin: 46px auto 67px auto;
+}
+
+.fa-trash-alt {
+}
+
+.underBar {
+  border: 1px solid #b3b3b3;
+  width: 420px;
+  margin: 0 auto;
+}
+
+.modalBtn {
+  border-radius: 60px;
+  background: #1d6154;
+  width: 237px;
+  height: 36px;
+  color: white;
+  border: none;
+  margin: 38px auto 45px auto;
+  cursor: pointer;
+}
