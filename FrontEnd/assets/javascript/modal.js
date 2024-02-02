@@ -1,5 +1,8 @@
 const modalContainer = document.querySelector(".modalContainer");
+const actualGallery = document.createElement("div");
 
+// Fonction qui créer la modal et tout les champs
+// dont elle a besoin et qui gère la fermeture
 function primaryModal() {
   const xMark = document.createElement("i");
   xMark.classList.add("fas", "fa-times");
@@ -8,12 +11,8 @@ function primaryModal() {
   primaryTitle.classList.add("modalTitle");
   primaryTitle.innerText = "Galerie photo";
   modalContainer.appendChild(primaryTitle);
-  const actualGallery = document.createElement("div");
   actualGallery.classList.add("actualGallery");
   modalContainer.appendChild(actualGallery);
-  const trash = document.createElement("i");
-  trash.classList.add("fas", "fa-trash-alt");
-  actualGallery.appendChild(trash);
   const underBar = document.createElement("div");
   underBar.classList.add("underBar");
   modalContainer.appendChild(underBar);
@@ -44,9 +43,27 @@ btnModif.addEventListener("click", () => {
   }
 });
 
-// Fonction pour fermer la modal
+// Fonction qui créer la capicité de fermer la modal
 function closeModal() {
   isModalOpen = false;
   // Supprimez les éléments de la modal
-  modalContainer.innerHTML = "";
+  modalContainer.textContent = "";
 }
+
+// Fonction d'affichage des images dans la modal
+async function displayGarage() {
+  actualGallery.innerHTML = "";
+  const imgModal = await getWork();
+  imgModal.forEach((element) => {
+    const figure = document.createElement("figure");
+    const img = document.createElement("img");
+    const trash = document.createElement("i");
+    trash.classList.add("fas", "fa-trash-alt");
+    trash.id = element.id;
+    img.src = element.imageUrl;
+    figure.appendChild(trash);
+    figure.appendChild(img);
+    actualGallery.appendChild(figure);
+  });
+}
+displayGarage();

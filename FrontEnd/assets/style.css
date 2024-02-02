@@ -453,7 +453,7 @@ footer nav ul li {
   width: 630px;
   background-color: white;
   left: 34%;
-  top: 18%;
+  top: 10%;
   border-radius: 10px;
 }
 
@@ -475,9 +475,6 @@ footer nav ul li {
   margin: 46px auto 67px auto;
 }
 
-.fa-trash-alt {
-}
-
 .underBar {
   border: 1px solid #b3b3b3;
   width: 420px;
@@ -493,4 +490,30 @@ footer nav ul li {
   border: none;
   margin: 38px auto 45px auto;
   cursor: pointer;
+}
+
+.actualGallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 46px 75px 67px 75px;
+  gap: 20px;
+  overflow-y: auto;
+}
+.actualGallery figure {
+  position: relative;
+}
+
+.actualGallery figure i {
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: white;
+  background-color: #000;
+  border: 5px solid black;
+  border-radius: 5px;
+}
+.actualGallery img {
+  width: 78.123px;
+  height: 104.08px;
 }
