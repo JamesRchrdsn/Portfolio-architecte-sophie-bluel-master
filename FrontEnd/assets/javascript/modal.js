@@ -139,10 +139,7 @@ async function displayModal() {
       figure.appendChild(img);
       actualGallery.appendChild(figure);
 
-      // Ajoute chaque image à la galerie principale
-      const mainPageImage = document.createElement("img");
-      mainPageImage.src = element.imageUrl;
-      gallery.appendChild(mainPageImage);
+      imgArchi(element);
     });
   } catch (error) {
     console.error("Error fetching works:", error);
