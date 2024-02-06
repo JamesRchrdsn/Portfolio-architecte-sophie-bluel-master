@@ -605,9 +605,19 @@ footer nav ul li {
   margin-bottom: 21px;
 }
 
-.modalContainer select {
+select#categorie {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(icons/chevron.png);
+  background-repeat: no-repeat;
+  background-position: right 28px center;
   margin-bottom: 47px;
   cursor: pointer;
+}
+
+select#categorie option {
+  font-family: "Work Sans", sans-serif;
 }
 
 .modalContainer input,
@@ -620,6 +630,7 @@ select {
   font-size: 14px;
   border: none;
   outline: none;
+  padding-left: 16px;
 }
 
 .validateBtn {
