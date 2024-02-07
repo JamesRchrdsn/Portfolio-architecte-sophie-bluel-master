@@ -193,6 +193,13 @@ function secondaryModal() {
   form.appendChild(titleInput);
   categorieLabel.textContent = "Catégorie";
   form.appendChild(categorieLabel);
+
+  // Vide le menu déroulant des catégories
+  // à chaques ouverture de la modal
+  while (categorieSelect.firstChild) {
+    categorieSelect.removeChild(categorieSelect.firstChild);
+  }
+
   categorieSelect.id = "categorie";
   categorieSelect.name = "categorie";
   categorieSelect.required = true;
@@ -303,8 +310,18 @@ async function sendData() {
       console.error("Erreur lors de l'envoi des données :", error);
     }
   } else {
-    // Affiche un message d'erreur si tous les champs ne sont pas remplis
-    console.error("Formulaire incomplet");
+    // Créer dynamiquement un message d'erreur si form incomplet
+    const errorMessage = document.createElement("div");
+    errorMessage.textContent =
+      "Veuillez remplir tous les champs du formulaire.";
+    errorMessage.id = "errorMessage";
+
+    // Vérifier si le message d'erreur existe déjà
+    const existingErrorMessage = document.getElementById("errorMessage");
+    if (!existingErrorMessage) {
+      // Ajouter le message d'erreur à la page
+      modalContainer.insertBefore(errorMessage, underBar);
+    }
   }
 }
 // Envoie le formulaire à l'api
@@ -328,8 +345,13 @@ function checkFormCompletion() {
   const isFileSelected = fileInput.files.length > 0;
 
   // Met à jour la classe du bouton de validation
+  // Et enleve le message de form incomplet
   if (isTitleFilled && isFileSelected) {
     validate.classList.add("completedValidate");
+    const errorMessage = document.getElementById("errorMessage");
+    if (errorMessage) {
+      errorMessage.remove();
+    }
   } else {
     validate.classList.remove("completedValidate");
   }
