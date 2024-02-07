@@ -36,7 +36,7 @@ async function getCategories() {
   const apiCategories = await fetch("http://localhost:5678/api/categories");
   return await apiCategories.json();
 }
-getCategories();
+
 async function btnCategories() {
   // Verification de l'etat si connecte
   // ou non pour annuler la creation des boutons
