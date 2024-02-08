@@ -303,6 +303,7 @@ async function sendData() {
 
         // Actualiser l'affichage de la galerie après l'ajout de la photo
         displayModal();
+        btnPhoto.classList.remove("hidden");
       } else {
         throw new Error("Erreur lors de l'envoi des données");
       }
