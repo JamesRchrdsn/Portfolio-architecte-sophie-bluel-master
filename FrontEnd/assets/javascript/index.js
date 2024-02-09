@@ -7,7 +7,6 @@ async function getWork() {
   const apiWorks = await fetch("http://localhost:5678/api/works");
   return await apiWorks.json();
 }
-getWork();
 
 // Afichage de works dans le DOM
 async function showWorks() {
@@ -17,7 +16,6 @@ async function showWorks() {
   });
 }
 showWorks();
-
 // Creation des images dans le dom
 function imgArchi(element) {
   const figure = document.createElement("figure");
