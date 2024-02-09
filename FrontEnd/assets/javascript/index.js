@@ -16,6 +16,7 @@ async function showWorks() {
   });
 }
 showWorks();
+
 // Creation des images dans le dom
 function imgArchi(element) {
   const figure = document.createElement("figure");
