@@ -651,6 +651,7 @@ select {
   width: 129px;
   height: 169px;
   z-index: 1;
+  object-fit: cover;
 }
 
 .hidden {
