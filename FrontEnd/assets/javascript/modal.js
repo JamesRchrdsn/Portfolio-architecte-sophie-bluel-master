@@ -101,6 +101,8 @@ function deleteImg(trash) {
     .then((response) => {
       if (!response.ok) {
       }
+      // Verification du contenu afin de savoir si c'est du json
+      // si oui récupère le contenu de la reponse json
       const contentType = response.headers.get("content-type");
       if (contentType && contentType.includes("application/json")) {
         return response.json();

@@ -29,7 +29,7 @@ function imgArchi(element) {
   gallery.appendChild(figure);
 }
 
-// // Affichage des Boutons Catégories
+// Affichage des Boutons Catégories
 
 async function getCategories() {
   const apiCategories = await fetch("http://localhost:5678/api/categories");
